@@ -1,7 +1,7 @@
 import prismaClient from "../../src/prisma/index";
 
 interface CreateTaskServiceProps {
-    idUser,
+    idUser: string,
     description: string;
     sector: string;
     priority: string;
