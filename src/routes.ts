@@ -10,6 +10,7 @@ import { GetAllTasksController } from './controllers/get-all-tasks-controller';
 import { GetAllUsersController } from './controllers/get-all-users-constroller';
 import { UpdateStatusTaskController } from './controllers/update-status-task-controller';
 import { GetUniqueUserController } from './controllers/get-unique-user';
+import { DeleteTaskController } from './controllers/delete-task-controller';
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions){
     fastify.post("/user", async (request: FastifyRequest, reply: FastifyReply) => {
@@ -26,6 +27,10 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
 
     fastify.get(`/user/:idUser`, async (request: FastifyRequest, reply: FastifyReply) => {
         return new GetUniqueUserController().handle(request, reply)
+    });
+
+    fastify.delete(`/task/:id`, async (request: FastifyRequest, reply: FastifyReply) => {
+        return new DeleteTaskController().handle(request, reply)
     });
 
     fastify.get(`/tasks`, async (request: FastifyRequest, reply: FastifyReply) => {

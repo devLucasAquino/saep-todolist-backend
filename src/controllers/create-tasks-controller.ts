@@ -15,7 +15,7 @@ class CreateTaskController{
                 sector, 
                 priority, 
                 register_date: new Date(), 
-                status,
+                status: "A fazer",
             });
 
         reply.send(task)
