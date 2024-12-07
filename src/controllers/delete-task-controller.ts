@@ -6,7 +6,7 @@ class DeleteTaskController{
         const { id } = request.params as { id: string };
 
         const deleteTaskService = new DeleteTaskService();
-        const task = deleteTaskService.execute({
+        const task = await deleteTaskService.execute({
             id
         });
     };

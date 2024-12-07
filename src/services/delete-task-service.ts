@@ -9,7 +9,7 @@ class DeleteTaskService{
 
         if(!id) return
 
-        const task = prismaClient.tasks.delete({
+        const task = await prismaClient.tasks.delete({
             where: {
                 id: id
             }
