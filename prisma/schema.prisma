@@ -28,7 +28,7 @@ model Tasks{
   sector String
   priority String
   register_date DateTime @default(now())
-  status String @default("a fazer")
+  status String
 
   @@map("tasks")
 }
