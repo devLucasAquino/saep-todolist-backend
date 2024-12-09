@@ -17,7 +17,7 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return new CreateUserController().handle(request, reply)
     });
 
-    fastify.post(`/task/:idUser`, async (request: FastifyRequest, reply: FastifyReply) => {
+    fastify.post(`/task/:user_id`, async (request: FastifyRequest, reply: FastifyReply) => {
         return new CreateTaskController().handle(request, reply)
     });
 
@@ -25,7 +25,7 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return new UpdateStatusTaskController().handle(request, reply)
     });
 
-    fastify.get(`/user/:idUser`, async (request: FastifyRequest, reply: FastifyReply) => {
+    fastify.get(`/user/:user_id`, async (request: FastifyRequest, reply: FastifyReply) => {
         return new GetUniqueUserController().handle(request, reply)
     });
 
