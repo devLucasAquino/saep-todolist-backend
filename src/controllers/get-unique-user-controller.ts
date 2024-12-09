@@ -1,13 +1,13 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { GetUniqueUserService } from "../services/get-unique-user";
+import { GetUniqueUserService } from "../services/get-unique-user-service";
 
 class GetUniqueUserController{
     async handle(request: FastifyRequest, reply: FastifyReply){
-        const { idUser } = request.params as { idUser: string }
+        const { user_id } = request.params as { user_id: string }
 
         const getUniqueUserService = new GetUniqueUserService();
         const user = getUniqueUserService.execute({
-            idUser
+            user_id
         });
 
         return user;

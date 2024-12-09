@@ -23,11 +23,11 @@ model Users{
 
 model Tasks{
   id String @id @default(uuid())
-  idUser String
+  user_id String
   description String
   sector String
   priority String
-  register_date DateTime @default(now())
+  register_date String
   status String
 
   @@map("tasks")

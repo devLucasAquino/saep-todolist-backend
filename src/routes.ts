@@ -9,7 +9,7 @@ import { CreateTaskController } from './controllers/create-tasks-controller';
 import { GetAllTasksController } from './controllers/get-all-tasks-controller';
 import { GetAllUsersController } from './controllers/get-all-users-constroller';
 import { UpdateStatusTaskController } from './controllers/update-status-task-controller';
-import { GetUniqueUserController } from './controllers/get-unique-user';
+import { GetUniqueUserController } from './controllers/get-unique-user-controller';
 import { DeleteTaskController } from './controllers/delete-task-controller';
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions){

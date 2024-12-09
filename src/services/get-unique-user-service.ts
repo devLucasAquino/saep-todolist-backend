@@ -1,17 +1,17 @@
 import prismaClient from "../prisma"
 
 interface GetUniqueUserServiceProps{
-    idUser: string
+    user_id: string
 };
 
 class GetUniqueUserService{
-    async execute({idUser}: GetUniqueUserServiceProps){
+    async execute({user_id}: GetUniqueUserServiceProps){
 
-        if(!idUser) return
+        if(!user_id) return
 
         const user = prismaClient.users.findUnique({
             where: {
-                id: idUser
+                id: user_id
             }
         })
 
